@@ -1,0 +1,513 @@
+/* ═══════════════════════════════════════════════════════════════
+   Connected Accounts — Page Styles
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ───────────── Layout ───────────── */
+.ca-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.ca-content {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0 36px 80px;
+}
+
+.ca-content::-webkit-scrollbar {
+    width: 5px;
+}
+
+.ca-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.ca-content::-webkit-scrollbar-thumb {
+    background: rgba(168, 149, 133, 0.25);
+    border-radius: 100px;
+}
+
+.ca-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(168, 149, 133, 0.4);
+}
+
+.ca-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    padding-top: 28px;
+}
+
+/* ───────────── Page Header ───────────── */
+.ca-header {
+    padding: 28px 36px 20px;
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+}
+
+.ca-header h1 {
+    font-family: var(--font-playfair), serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+    margin-bottom: 4px;
+}
+
+.ca-header p {
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+/* ───────────── Section Labels ───────────── */
+.ca-section-label {
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.ca-section-subtitle {
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: -6px;
+    margin-bottom: 14px;
+}
+
+/* ───────────── Connection Cards ───────────── */
+.ca-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    background: var(--bg-surface);
+    border-radius: 12px;
+    padding: 20px 24px;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    transition: box-shadow var(--transition-base);
+}
+
+.ca-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.ca-card+.ca-card {
+    margin-top: 12px;
+}
+
+.ca-card--connected {
+    border: 1.5px solid #10B981;
+}
+
+.ca-card--disconnected {
+    border: 1px solid #E8DDD4;
+    opacity: 0.85;
+}
+
+.ca-card--disconnected:hover {
+    opacity: 1;
+}
+
+/* Icon container */
+.ca-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 20px;
+}
+
+.ca-icon--gmail {
+    background: #F4F4F4;
+}
+
+.ca-icon--instagram {
+    background: linear-gradient(135deg, #833AB4, #FD1D1D, #F77737);
+    color: white;
+}
+
+.ca-icon--youtube {
+    background: #FF0000;
+    color: white;
+    border-radius: 10px;
+}
+
+.ca-icon--linkedin {
+    background: #0A66C2;
+    color: white;
+    border-radius: 10px;
+}
+
+.ca-icon--modash {
+    background: #6C5CE7;
+    color: white;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
+}
+
+.ca-icon--ic {
+    background: #1C1410;
+    color: white;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
+}
+
+/* Card body */
+.ca-card-body {
+    flex: 1;
+    min-width: 0;
+}
+
+.ca-card-name {
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+}
+
+.ca-card-desc {
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 4px;
+    line-height: 1.45;
+}
+
+/* Connection info */
+.ca-connection-info {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
+    font-size: 13px;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.ca-connection-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #10B981;
+    flex-shrink: 0;
+}
+
+.ca-connection-since {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 2px;
+    margin-left: 13px;
+}
+
+/* Warning notice */
+.ca-warning {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
+    font-size: 12px;
+    color: #D97706;
+}
+
+/* ───────────── Status Pills ───────────── */
+.ca-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+    position: absolute;
+    top: 16px;
+    right: 20px;
+}
+
+.ca-pill--connected {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10B981;
+}
+
+.ca-pill--disconnected {
+    background: rgba(168, 149, 133, 0.12);
+    color: var(--text-muted);
+}
+
+/* ───────────── Phase Badge ───────────── */
+.ca-phase-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: #E8DDD4;
+    color: var(--text-muted);
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* ───────────── Card Actions ───────────── */
+.ca-card-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    flex-shrink: 0;
+    margin-top: 28px;
+    /* push below the pill */
+}
+
+/* Ghost button */
+.ca-btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-primary);
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    white-space: nowrap;
+}
+
+.ca-btn-ghost:hover {
+    border-color: var(--brand-primary);
+    color: var(--brand-primary);
+    background: #FFF8F5;
+}
+
+/* Disconnect button */
+.ca-btn-disconnect {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 16px;
+    border-radius: 8px;
+    border: 1px solid #FCA5A5;
+    background: transparent;
+    color: #EF4444;
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    white-space: nowrap;
+}
+
+.ca-btn-disconnect:hover {
+    background: #FEF2F2;
+    border-color: #EF4444;
+}
+
+/* Terracotta outlined connect button */
+.ca-btn-connect {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 16px;
+    border-radius: 8px;
+    border: 1.5px solid var(--brand-primary);
+    background: transparent;
+    color: var(--brand-primary);
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    white-space: nowrap;
+}
+
+.ca-btn-connect:hover {
+    background: rgba(196, 98, 45, 0.06);
+}
+
+.ca-btn-connect:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.ca-btn-connect:disabled:hover {
+    background: transparent;
+}
+
+/* View Usage button */
+.ca-btn-usage {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-primary);
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    white-space: nowrap;
+    margin-top: 10px;
+}
+
+.ca-btn-usage:hover {
+    border-color: var(--brand-primary);
+    color: var(--brand-primary);
+    background: #FFF8F5;
+}
+
+/* ───────────── Disconnected card bottom row ───────────── */
+.ca-card-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 14px;
+}
+
+/* ───────────── Data Providers Grid ───────────── */
+.ca-providers-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.ca-provider-card {
+    background: var(--bg-surface);
+    border: 1.5px solid #10B981;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow var(--transition-base);
+}
+
+.ca-provider-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.ca-provider-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 6px;
+}
+
+.ca-provider-name {
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.ca-provider-desc {
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.ca-provider-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
+    font-size: 12px;
+    color: #10B981;
+    font-weight: 600;
+}
+
+.ca-provider-stat {
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 3px;
+}
+
+/* ───────────── Security Banner ───────────── */
+.ca-security {
+    background: #FFF8F5;
+    border: 1px solid #E8DDD4;
+    border-left: 4px solid var(--brand-primary);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-top: 36px;
+}
+
+.ca-security-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+}
+
+.ca-security-icon {
+    font-size: 16px;
+}
+
+.ca-security p {
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
+    font-size: 13px;
+    color: var(--text-primary);
+    line-height: 1.55;
+    opacity: 0.85;
+}
+
+/* ───────────── Tooltip ───────────── */
+.ca-tooltip-wrap {
+    position: relative;
+}
+
+.ca-tooltip-wrap .ca-tooltip {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--bg-sidebar);
+    color: var(--text-sidebar);
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
+    font-size: 11px;
+    white-space: nowrap;
+    padding: 5px 12px;
+    border-radius: 6px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition-fast);
+    z-index: 10;
+}
+
+.ca-tooltip-wrap:hover .ca-tooltip {
+    opacity: 1;
+}
+
+/* ───────────── Section spacing ───────────── */
+.ca-section+.ca-section {
+    margin-top: 32px;
+}

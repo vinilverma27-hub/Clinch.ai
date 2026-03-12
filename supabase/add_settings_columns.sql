@@ -1,0 +1,16 @@
+ALTER TABLE brands
+  ADD COLUMN IF NOT EXISTS industry TEXT DEFAULT '',
+  ADD COLUMN IF NOT EXISTS website TEXT DEFAULT '',
+  ADD COLUMN IF NOT EXISTS description TEXT DEFAULT '',
+  ADD COLUMN IF NOT EXISTS target_platforms 
+    TEXT[] DEFAULT '{}',
+  ADD COLUMN IF NOT EXISTS target_niches 
+    TEXT[] DEFAULT '{}',
+  ADD COLUMN IF NOT EXISTS monthly_budget 
+    TEXT DEFAULT '',
+  ADD COLUMN IF NOT EXISTS content_formats 
+    TEXT[] DEFAULT '{}',
+  ADD COLUMN IF NOT EXISTS campaign_goals 
+    TEXT[] DEFAULT '{}',
+  ADD COLUMN IF NOT EXISTS logo_url 
+    TEXT DEFAULT '';
